@@ -7,18 +7,23 @@ function Account() {
     email: undefined,
     password: undefined,
   };
-  const handleSubmit = () => {};
+  const handleSubmit = (event) => {
+    // TODO Call API instead of this alert
+    console.log("Creating account for email " + state.email);
+    event.preventDefault();
+  };
+
   const handleGivenNameChange = (event) => {
-    state.givenName = event.target.value.givenName;
+    state.givenName = event.target.value;
   };
   const handleSurnameChange = (event) => {
-    state.surname = event.target.value.surname;
+    state.surname = event.target.value;
   };
   const handleEmailChange = (event) => {
-    state.email = event.target.value.email;
+    state.email = event.target.value;
   };
   const handlePasswordChange = (event) => {
-    state.password = event.target.value.password;
+    state.password = event.target.value;
   };
 
   return (
