@@ -1,4 +1,3 @@
-import { hash } from "bcrypt";
 import React from "react";
 
 function Account() {
@@ -19,7 +18,7 @@ function Account() {
     state.email = event.target.value.email;
   };
   const handlePasswordChange = (event) => {
-    state.password = hash(event.target.value.password);
+    state.password = event.target.value.password;
   };
 
   return (
