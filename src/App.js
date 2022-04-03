@@ -4,6 +4,7 @@ import Quiz from "./components/Quiz";
 import Quizzes from "./components/Quizzes";
 import Account from "./components/Account";
 import QuizPlayer from "./components/QuizPlayer";
+import React from "react";
 
 function App() {
   return (

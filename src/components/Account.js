@@ -1,21 +1,40 @@
+import { hash } from "bcrypt";
+import React from "react";
+
 function Account() {
-  const state = {};
+  const state = {
+    givenName: undefined,
+    surname: undefined,
+    email: undefined,
+    password: undefined,
+  };
   const handleSubmit = () => {};
-  const handleChange = () => {};
+  const handleGivenNameChange = (event) => {
+    state.givenName = event.target.value.givenName;
+  };
+  const handleSurnameChange = (event) => {
+    state.surname = event.target.value.surname;
+  };
+  const handleEmailChange = (event) => {
+    state.email = event.target.value.email;
+  };
+  const handlePasswordChange = (event) => {
+    state.password = hash(event.target.value.password);
+  };
 
   return (
     <>
       <h1>Create account</h1>
       <h3>Enter your details</h3>
 
-      <form onsubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <label>
           Given Name:
           <input
             type="text"
             style={{ display: "block" }}
             value={state.givenName}
-            onChange={handleChange}
+            onChange={handleGivenNameChange}
           />
         </label>
         <label>
@@ -24,7 +43,7 @@ function Account() {
             type="text"
             style={{ display: "block" }}
             value={state.surname}
-            onChange={handleChange}
+            onChange={handleSurnameChange}
           />
         </label>
         <label>
@@ -33,7 +52,7 @@ function Account() {
             type="email"
             style={{ display: "block" }}
             value={state.email}
-            onChange={handleChange}
+            onChange={handleEmailChange}
           />
         </label>
         <label>
@@ -42,7 +61,7 @@ function Account() {
             type="password"
             style={{ display: "block" }}
             value={state.password}
-            onChange={handleChange}
+            onChange={handlePasswordChange}
           />
         </label>
         <input type="submit" value="Sign up" />
