@@ -7,13 +7,17 @@ import QuizPlayer from "./components/QuizPlayer";
 
 function App() {
   return (
-    <div>
-      <Question />
-      <Quiz />
-      <Quizzes />
-      <Account />
-      <QuizPlayer />
-    </div>
+    <>
+      <div>
+        <Question />
+        <Quiz />
+        <Quizzes />
+        <Account />
+        <QuizPlayer />
+      </div>
+
+      <h1>test</h1>
+    </>
   );
 }
 
